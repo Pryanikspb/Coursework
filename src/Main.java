@@ -33,17 +33,10 @@ public class Main {
         }
 
         public static Employee getEmployeeMinSalary() {
-            double min = 0;
+            double min = Double.MAX_VALUE;
             int index = 0;
             Employee employeeMinSalary = null;
 
-            for (int i = 0; i < employees.length; i++) {
-                if (employees[i] != null) {
-                    min = employees[i].getSalary();
-                    index = i;
-                    break;
-                }
-            }
             for (int i = index; i < employees.length; i++) {
                 if (employees[i] == null) continue;
                 if (employees[i].getSalary() < min) {
@@ -55,17 +48,10 @@ public class Main {
         }
 
     public static Employee getEmployeeMaxSalary() {
-        double max = 0;
+        double max = Double.MIN_VALUE;
         int index = 0;
         Employee employeeMaxSalary = null;
 
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != null) {
-                max = employees[i].getSalary();
-                index = i;
-                break;
-            }
-        }
         for (int i = index; i < employees.length; i++) {
             if (employees[i] == null) continue;
             if (employees[i].getSalary() > max) {

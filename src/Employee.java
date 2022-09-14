@@ -1,6 +1,6 @@
 public class Employee {
 
-    private int id;
+    private final int id;
     private String fullname;
     private int department;
     private double salary;
@@ -42,6 +42,7 @@ public class Employee {
     public double getSalary() {
         return salary;
     }
+
 
     public static int getCounter() {
         return counter;
